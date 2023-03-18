@@ -53,7 +53,6 @@ public class Task5 {
                     }
                 }
             list.set(num, string);
-            System.out.println(list);
         }
 
         public  static String getValue (String s){
