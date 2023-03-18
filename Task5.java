@@ -63,11 +63,10 @@ public class Task5 {
     public static Integer getIndex (String s){
         String[] temp = s.split("~");
             int num = 0;
-        {
                 if (isNumber(temp[1])){
                     num = Integer.parseInt(temp[1]);
                 }
-            }return num;
+                return num;
         }
         public static boolean isNumber (String str){
             try {
