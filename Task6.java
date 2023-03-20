@@ -22,17 +22,19 @@ public class Task6 {
         LinkedList<String> result = new LinkedList<>();
         System.out.println(Arrays.toString(words));
         Map<Integer, List<String>> letter = new HashMap<>();
-            for (int i = 0; i < words.length; i++){
-                for (String s: words) {
-                    if (s.length() == i ) {
+            for (int i = 0; i < words.length; i++) {
+                for (String s : words) {
+                    if (s.length() == i) {
                         letter.put(i, Collections.singletonList(s));
-                        if (letter.get(i) != null){
+                        if (letter.get(i) != null) {
                             result.add(s);
                         }
+                        letter.put(i, result);
+                    }
                 }
+                result = new LinkedList<>();
             }
-        }
-            System.out.println(result);
+        System.out.println(letter);
         }
   }
 
