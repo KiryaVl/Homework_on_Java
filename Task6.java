@@ -14,10 +14,11 @@ public class Task6 {
          * ..
          *
          */
-        String text = "Мороз и солнце день чудесный Еще ты дремлешь друг прелестный Пора красавица проснись";
+        String text = "Мороз и солнце день чудесный, Еще ты дремлешь друг прелестный, Пора красавица проснись";
         collectStats(text);
         }
     static void collectStats(String text) {
+        text = removePunctuations(text);
         String [] words = text.split((" "));
         LinkedList<String> result = new LinkedList<>();
         System.out.println(Arrays.toString(words));
@@ -36,5 +37,12 @@ public class Task6 {
             }
         System.out.println(letter);
         }
+
+
+
+
+    public static String removePunctuations(String source) {
+        return source.replaceAll("[!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]", "");
+    }
   }
 
