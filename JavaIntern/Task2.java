@@ -1,4 +1,4 @@
-package HomeWorkTasks;
+package HomeWorkTasks.JavaIntern;
 
 import java.io.BufferedWriter;
 import java.io.File;

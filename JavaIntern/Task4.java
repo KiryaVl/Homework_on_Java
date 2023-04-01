@@ -1,4 +1,4 @@
-package HomeWorkTasks;
+package HomeWorkTasks.JavaIntern;
 
 import java.util.ArrayList;
 import java.util.List;

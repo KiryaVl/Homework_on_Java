@@ -1,9 +1,7 @@
-package HomeWorkTasks;
+package HomeWorkTasks.JavaIntern;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
 /*Создать класс Person.
 У класса должны быть поля:
