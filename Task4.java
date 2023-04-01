@@ -28,7 +28,7 @@ public class Task4 {
     private static ArrayList<String> replacenum(ArrayList<String> stringArrayList) {
         ArrayList<String> newString = new ArrayList<>();
         for (String s : stringArrayList) {
-            if (isNumber(s) == false) {
+            if (!isNumber(s)) {
                 newString.add(s);
             }
         }
