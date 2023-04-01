@@ -50,25 +50,25 @@ public class Person {
         for (String s : motherList) {
             s = s.toLowerCase();
             if (Objects.equals(s, status)) {
-                thisStatus = HomeWorkTasks.Task1.status.mother;
+                thisStatus = HomeWorkTasks.OOP.Task1.status.mother;
             }
         }
          for (String s: fatherList){
              s = s.toLowerCase();
             if (Objects.equals(s, status)){
-                thisStatus = HomeWorkTasks.Task1.status.father;
+                thisStatus = HomeWorkTasks.OOP.Task1.status.father;
             }
         }
          for (String s: daughterList) {
              s = s.toLowerCase();
              if (Objects.equals(s, status)) {
-                 thisStatus = HomeWorkTasks.Task1.status.daughter;
+                 thisStatus = HomeWorkTasks.OOP.Task1.status.daughter;
              }
          }
          for (String s: sonList){
              s = s.toLowerCase();
              if (Objects.equals(s, status)){
-                 thisStatus = HomeWorkTasks.Task1.status.son;
+                 thisStatus = HomeWorkTasks.OOP.Task1.status.son;
              }
          }
         return thisStatus;
