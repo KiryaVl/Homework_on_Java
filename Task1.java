@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Task1 {
+
     public static void main(String[] args) {
         System.out.println(isSumBetween10And20(5, 15)); // true
         System.out.println(isSumBetween10And20(7, 15)); // false
