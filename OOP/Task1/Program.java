@@ -44,14 +44,23 @@ public class Program {
         dict_command.put("3", new Command() {
             @Override
             public void runCommand() {
+           FamilyTree.releishonship(family);
+            }
+        });
+        dict_command.put("4", new Command() {
+            @Override
+            public void runCommand() {
                 b = false;
             }
         });
         Scanner sc = new Scanner(System.in);
-//        FamilyTree.relationship(family);
 
 
-        System.out.println("Команды для работы со справочником : \n Добавление новой записи  - 1 \n Поиск по справочнику - 2 \n Выход - 3 ");
+        System.out.println("Команды для работы со справочником : \n" +
+                "** Добавление новой записи  - 1 ** \n" +
+                "** Поиск по справочнику - 2 ** \n" +
+                "** Задать отношения - 3 ** \n" +
+                "** Выход - 4 ** ");
 
         while (b) {
             printer.print("Команда > ");
