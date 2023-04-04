@@ -12,6 +12,29 @@ public class Program {
         family = new LinkedList<>();
         b = true;
         Map<String, Command> dict_command = new HashMap<>();
+        extracted(dict_command);
+        Scanner sc = new Scanner(System.in);
+
+
+        System.out.println("Команды для работы со справочником : \n" +
+                "** Добавление новой записи  - 1 ** \n" +
+                "** Поиск по справочнику - 2 ** \n" +
+                "** Задать отношения - 3 ** \n" +
+                "** Выход - 4 ** ");
+
+        while (b) {
+            printer.print("Команда > ");
+            String command = sc.next();
+            if (dict_command.containsKey(command)) {
+                dict_command.get(command).runCommand();
+        }
+            else {
+                printer.print("Command error!!!");
+            }
+        }
+    }
+
+    private static void extracted(Map<String, Command> dict_command) {
         dict_command.put("1", new Command() {
             @Override
             public void runCommand() {
@@ -53,24 +76,5 @@ public class Program {
                 b = false;
             }
         });
-        Scanner sc = new Scanner(System.in);
-
-
-        System.out.println("Команды для работы со справочником : \n" +
-                "** Добавление новой записи  - 1 ** \n" +
-                "** Поиск по справочнику - 2 ** \n" +
-                "** Задать отношения - 3 ** \n" +
-                "** Выход - 4 ** ");
-
-        while (b) {
-            printer.print("Команда > ");
-            String command = sc.next();
-            if (dict_command.containsKey(command)) {
-                dict_command.get(command).runCommand();
-        }
-            else {
-                printer.print("Command error!!!");
-            }
-        }
     }
 }
