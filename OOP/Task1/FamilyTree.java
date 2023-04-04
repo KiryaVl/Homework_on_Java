@@ -67,7 +67,7 @@ public class FamilyTree extends Program {
                              String name = tempPerson.getName();
                              LinkedList list = new LinkedList<>();
                              list.add(tempPerson2);
-                             System.out.println("Братья/сестры " + name + list);
+                             System.out.println("Дети " + name + list);
                              saveFiles.savefile(list.toString());
                          }
                      }

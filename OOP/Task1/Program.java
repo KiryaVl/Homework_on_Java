@@ -1,5 +1,6 @@
 package HomeWorkTasks.OOP.Task1;
 
+import java.io.File;
 import java.util.*;
 
 public class Program {
@@ -20,7 +21,8 @@ public class Program {
                 "** Добавление новой записи  - 1 ** \n" +
                 "** Поиск по справочнику - 2 ** \n" +
                 "** Задать отношения - 3 ** \n" +
-                "** Выход - 4 ** ");
+                "** Сохранить записи в файл - 4 **\n" +
+                "** Выход - 5 ** ");
 
         while (b) {
             printer.print("Команда > ");
@@ -71,6 +73,14 @@ public class Program {
             }
         });
         dict_command.put("4", new Command() {
+            @Override
+            public void runCommand() {
+                SaveFiles saveFiles = new PrinterImple();
+                saveFiles.savefile(String.valueOf(family));
+                        System.out.println("Save complete!");
+                };
+        });
+        dict_command.put("5", new Command() {
             @Override
             public void runCommand() {
                 b = false;
