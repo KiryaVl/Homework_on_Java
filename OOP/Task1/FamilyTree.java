@@ -1,6 +1,7 @@
 package HomeWorkTasks.OOP.Task1;
 
 
+import java.io.IOException;
 import java.util.LinkedList;
 import java.util.Objects;
 import java.util.Scanner;
@@ -8,7 +9,7 @@ import java.util.Scanner;
 public class FamilyTree extends Program {
     public LinkedList<Person> familyList = Program.family;
 
-     public static LinkedList releishonship(LinkedList<Person> familyList) {
+     public static LinkedList releishonship(LinkedList<Person> familyList) throws IOException {
          SaveFiles saveFiles = new PrinterImple();
          Scanner scanner = new Scanner(System.in);
          for (int i = 0; i < familyList.size(); i++) {

@@ -1,8 +1,7 @@
 package HomeWorkTasks.OOP.Task2;
 
-public abstract class Trowing implements Weapon, SecondWeapon{
+public abstract class Trowing implements Weapon{
     private int distance;
-    private boolean secondWeapon;
 
 
     public Trowing(int distance) {
@@ -18,4 +17,6 @@ public abstract class Trowing implements Weapon, SecondWeapon{
                 " distance: " + distance +
                 " damage: " + damage();
     }
+
+    public abstract boolean block();
 }

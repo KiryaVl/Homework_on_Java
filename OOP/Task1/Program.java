@@ -1,6 +1,7 @@
 package HomeWorkTasks.OOP.Task1;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.*;
 
 public class Program {
@@ -9,7 +10,7 @@ public class Program {
     public static boolean b;
     public static LinkedList<Person> family;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         family = new LinkedList<>();
         b = true;
         Map<String, Command> dict_command = new HashMap<>();
@@ -68,13 +69,13 @@ public class Program {
         });
         dict_command.put("3", new Command() {
             @Override
-            public void runCommand() {
+            public void runCommand() throws IOException {
            FamilyTree.releishonship(family);
             }
         });
         dict_command.put("4", new Command() {
             @Override
-            public void runCommand() {
+            public void runCommand() throws IOException {
                 SaveFiles saveFiles = new PrinterImple();
                 saveFiles.savefile(String.valueOf(family));
                         System.out.println("Save complete!");
