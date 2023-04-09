@@ -10,7 +10,9 @@ public class Bow extends Trowing{
 
     @Override
     public Integer damage() {
-        return 10;
+         if (getDistance() > 10)
+             return 20;
+         return 10;
     }
 
     @Override

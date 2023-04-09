@@ -21,10 +21,16 @@ public class Warrior<T extends Weapon, P extends SecondWeapon> extends Person{
     }
 
     public int harm(){
-        boolean isHit = random.nextBoolean();
-        int damage = 0;
+        int damage = weapon.damage();
+        boolean isHit;
+        if (damage > 0 && random.nextInt(damage) < 8) {
+                damage--;
+                isHit = true;
+            System.out.println("Miss attack");
+            }
+            else isHit = false;
         if (isHit){
-            damage = random.nextInt(weapon.damage() + 1);
+            damage = random.nextInt(weapon.damage() + 2);
         }
         return damage;
     }

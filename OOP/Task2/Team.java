@@ -2,10 +2,11 @@ package HomeWorkTasks.OOP.Task2;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Team <T extends Person> implements Iterable <T>{
-    List <T> persons = new ArrayList<>();
+    LinkedList <T> persons = new LinkedList<>();
 
     @Override
     public Iterator<T> iterator() {
