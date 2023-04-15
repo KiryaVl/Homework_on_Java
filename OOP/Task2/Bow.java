@@ -1,7 +1,10 @@
 package HomeWorkTasks.OOP.Task2;
 
+import java.util.Random;
+
 public class Bow extends Trowing{
     private final String name;
+    private Random random = new Random();
 
     public Bow(int distance) {
         super(distance);
@@ -11,7 +14,7 @@ public class Bow extends Trowing{
     @Override
     public Integer damage() {
          if (getDistance() > 10)
-             return 20;
+             return random.nextInt(20, 30);;
          return 10;
     }
 
